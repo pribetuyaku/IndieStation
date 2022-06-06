@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFinal.Views.Games"
+             xmlns:vm="clr-namespace:AppFinal.ViewModels"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:GamesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Margin="20,20,20,0" Padding="15,20">
+
+            <Label TextColor="#055052" FontSize="20" Text="Games Available:" TextDecorations="Underline"/>
+            <Button
+                HeightRequest="50" WidthRequest="350"
+                HorizontalOptions="Center"
+                Text="Treasure Hunt"
+                TextColor="#F3F2C9"
+                BackgroundColor="#055052"
+                BorderColor="#53B8BB"
+                BorderWidth="1.5"
+                CornerRadius="30"
+                Clicked = "Open_Game">
+
+            </Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

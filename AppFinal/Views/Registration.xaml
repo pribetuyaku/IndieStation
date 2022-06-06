@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppFinal.Views.Registration"
+             BackgroundColor="#055052"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+            <Image Source="indie_dark.png" WidthRequest="250"></Image>
+
+            <Entry x:Name="txtUsername" Placeholder="Username" TextColor="white" PlaceholderColor="#F3F2C9"></Entry>
+            <Entry x:Name="txtEmail" Placeholder="Email" TextColor="white" PlaceholderColor="#F3F2C9"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="white" PlaceholderColor="#F3F2C9"></Entry>
+            <Entry x:Name="txtConfirmPassword" Placeholder="Confirm Password" IsPassword="True" TextColor="white" PlaceholderColor="#F3F2C9"></Entry>
+
+            <Button
+                VerticalOptions="Center"
+                Text="Register"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                BorderColor="#F3F2C9"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                >
+            </Button>
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Back to Login Area" TextColor="#F3F2C9" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

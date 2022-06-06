@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFinal.Views.Feed"
+             xmlns:vm="clr-namespace:AppFinal.ViewModels"
+             Title= "{Binding Title}"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <vm:FeedViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="600"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid Padding="5">
+                <Image Source="indie" BackgroundColor="White"
+                    Grid.Row="0" Grid.ColumnSpan="3" />
+                <Button Grid.Column="2"  FontSize="10" Text="More Posts" BackgroundColor="#003638" Clicked="BtnRefreshPosts"></Button>
+            </Grid>
+
+            <ScrollView Grid.Row="1" >
+                <StackLayout x:Name="MainLayout" >
+                    <!-- template for the view -->
+                    <!-- -->
+                    <!-- <Grid  Margin="10,0,10,0" BackgroundColor="LightGray" Padding="10,10,10,10" >  -->
+                    <!--     <Grid.RowDefinitions> -->
+                    <!--         <RowDefinition Height="80"/> -->
+                    <!--         <RowDefinition Height="Auto"/> -->
+                    <!--         <RowDefinition Height="50"/> -->
+                    <!--     </Grid.RowDefinitions> -->
+                    <!-- -->
+                    <!--     <Image Source="{Binding UserPicture}" Aspect="AspectFit" Grid.Column="0" Grid.Row="0"  HeightRequest="200" WidthRequest="200" /> -->
+                    <!--     <Label Text="Seu Juca" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" VerticalTextAlignment="Center" FontSize="20"></Label> -->
+                    <!--     <Label Grid.Row ="1" Margin="25,10,25,10" Grid.ColumnSpan="3" Text="Sou novo aqui , mas se usar direito toda rede social é pra transa"></Label> -->
+                    <!--     <Button Grid.Row="2" Grid.Column="0" FontSize="14" Text="I like it!!!" BackgroundColor="#003638"></Button> -->
+                    <!--     <Button Grid.Row="2" Grid.Column="1"  FontSize="14" Text="Visit Profile" BackgroundColor="#003638"></Button> -->
+                    <!--     <Label Grid.Row="2" Grid.Column="2" Text="timeStamp" FontSize="10" HorizontalTextAlignment="Center"></Label> -->
+                    <!-- -->
+                    <!-- </Grid> -->
+
+                </StackLayout>
+            </ScrollView>
+
+            <Grid Grid.Row="2" >
+                <Entry x:Name="PostTyped" Placeholder="What are you thinking about?" TextColor="Black" PlaceholderColor="Black" Grid.ColumnSpan="5"></Entry>
+                <Button
+                    VerticalOptions="Center"
+                    Text="Post"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    BorderColor="Black"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Grid.Column="5"
+                    Clicked="Button_Post">
+                </Button>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

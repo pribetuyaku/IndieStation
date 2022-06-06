@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:AppFinal.Views"
+       Title="AppFinal"
+       x:Class="AppFinal.AppShell">
+
+    <Shell.Resources>
+        
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#003638" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#003638" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <Tab Title="Profile" Icon="profile.png">
+            <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" />
+        </Tab>
+        <Tab Title="Feed" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Feed}" />
+        </Tab>
+        <Tab Title="Games" Icon="game.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Games}" />
+        </Tab>
+        <Tab Title="Friends" Icon="friends.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Friends}" />
+        </Tab>
+        <Tab Title="Profile" Icon="profile.png" IsVisible="False">
+            <ShellContent ContentTemplate="{DataTemplate local:Profile}" />
+        </Tab>
+        <Tab Title="Friend Profile" Icon="profile.png" IsVisible="False">
+            <ShellContent ContentTemplate="{DataTemplate local:FriendProfileView}" />
+        </Tab>
+        <Tab Title="Messages" Icon="profile.png" IsVisible="False">
+            <ShellContent ContentTemplate="{DataTemplate local:MessagesView}" />
+        </Tab>
+        
+    </TabBar>
+    <ShellContent ContentTemplate="{DataTemplate local:Registration}" />
+    
+
+
+</Shell>

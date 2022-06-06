@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:AppFinal.ViewModels"
+             x:Class="AppFinal.Views.MessagesView"
+             Title= "{Binding Title}"
+             >
+    <ContentPage.BindingContext>
+        <vm:MessagesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="600"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0" >
+                <StackLayout x:Name="MainLayout" >
+                    <!-- Template -->
+                    <!-- <Grid Margin="20,0,60,0"> -->
+                    <!--     <Grid.RowDefinitions> -->
+                    <!--         <RowDefinition Height="20"/> -->
+                    <!--     </Grid.RowDefinitions> -->
+                    <!-- -->
+                    <!--     <Label Text =" your friend"  FontSize="10" Margin="0,10,10,-10" ></Label> -->
+                    <!--     <Label Grid.Row="1"  BackgroundColor="DarkCyan"   Text="lorensdasdsad asdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad lorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsaasdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsa" ></Label> -->
+                    <!-- </Grid> -->
+                    <!-- -->
+                    <!-- <Grid Margin="60,0,20,0"> -->
+                    <!--     <Grid.RowDefinitions> -->
+                    <!--         <RowDefinition Height="20"/> -->
+                    <!--     </Grid.RowDefinitions> -->
+                    <!-- -->
+                    <!--     <Label Text =" you" HorizontalTextAlignment="End" FontSize="10" Margin="10,10,0,-10"></Label> -->
+                    <!-- -->
+                    <!--     <Label Grid.Row="1" BackgroundColor="CadetBlue" Text="lorensdasdsad asdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad lorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsaasdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsa" HorizontalTextAlignment="End" ></Label> -->
+                    <!-- </Grid> -->
+                    <!-- -->
+                    <!-- <Grid Margin="20,0,60,0"> -->
+                    <!--     <Grid.RowDefinitions> -->
+                    <!--         <RowDefinition Height="20"/> -->
+                    <!--     </Grid.RowDefinitions> -->
+                    <!-- -->
+                    <!--     <Label Text =" your friend"  FontSize="10" Margin="0,10,10,-10" ></Label> -->
+                    <!--     <Label Grid.Row="1"  BackgroundColor="DarkCyan"   Text="lorensdasdsad asdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad lorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsalorensdasdsad asdsaddsadsaasdsaddsadsalorensdasdsad -->
+                    <!--            asdsaddsadsalorensdasdsad asdsaddsadsa" ></Label> -->
+                    <!-- </Grid> -->
+                </StackLayout>
+            </ScrollView>
+
+            <Grid Grid.Row="1">
+                <Entry x:Name="Message" Placeholder="Type your message" TextColor="white" PlaceholderColor="WhiteSmoke" Grid.ColumnSpan="5"></Entry>
+                <Button 
+                    VerticalOptions="Center"
+                    Text="send"
+                    TextColor="white"
+                    BackgroundColor="Transparent"
+                    BorderColor="white"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Grid.Column="5"
+                    Clicked="BtnSendMessage">
+                </Button>
+            </Grid>
+
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
